@@ -76,3 +76,21 @@
     </style>
 </head>
 <body>
+
+    <div class="container">
+        <h2>Cek Informasi Cuaca 🌍</h2>
+        <div class="input-group">
+            <input type="text" id="inputLokasi" placeholder="Contoh: Jakarta">
+            <button onclick="getWeather()">Cari</button>
+        </div>
+        
+        <div id="weatherData">
+            <p><strong>Negara:</strong> <span id="negara">-</span></p>
+            <p><strong>Provinsi:</strong> <span id="provinsi">-</span></p>
+            <p><strong>Kota/Kecamatan:</strong> <span id="kecamatan">-</span></p>
+            <hr>
+            <p><strong>Suhu:</strong> <span id="suhu">-</span></p>
+            <p><strong>Longitude:</strong> <span id="longitude">-</span></p>
+            <p><strong>Latitude:</strong> <span id="latitude">-</span></p>
+        </div>
+    </div>
