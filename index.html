@@ -119,3 +119,28 @@
                 dataType: "json",
                 success: function(data) {
                     console.log(data); // Menampilkan seluruh data response di console untuk debug
+
+                    // Mengambil data spesifik dari response JSON
+                    const negara = data.location.country;
+                    const provinsi = data.location.region;
+                    const kecamatan = data.location.name; 
+                    const suhu = data.current.temp_c + " °C"; 
+                    const longitude = data.location.lon;
+                    const latitude = data.location.lat;
+
+                    // Menampilkan data ke elemen HTML yang sesuai
+                    $("#negara").text(negara);
+                    $("#provinsi").text(provinsi);
+                    $("#kecamatan").text(kecamatan);
+                    $("#suhu").text(suhu);
+                    $("#longitude").text(longitude);
+                    $("#latitude").text(latitude);
+                },
+                error: function(error) {
+                    console.error("Error:", error);
+                    alert("Lokasi tidak ditemukan atau terjadi kesalahan. Pastikan nama lokasi benar.");
+                    // Mengosongkan data jika terjadi error
+                    $("#negara, #provinsi, #kecamatan, #suhu, #longitude, #latitude").text("-");
+                }
+            });
+        }
