@@ -144,3 +144,14 @@
                 }
             });
         }
+
+       
+        $("#inputLokasi").on('keypress', function(e) {
+            if (e.which === 13) { 
+                getWeather();
+            }
+        });
+    </script>
+
+</body>
+</html>
