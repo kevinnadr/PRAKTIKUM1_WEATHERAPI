@@ -108,6 +108,14 @@
                 return;
             }
             
-          
+           
             const apiKey = "03d7b4d222cb4c8581940421250610"; 
             const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(lokasi)}&aqi=no`;
+
+            // Melakukan request ke API menggunakan jQuery AJAX
+            $.ajax({
+                url: apiUrl,
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    console.log(data); // Menampilkan seluruh data response di console untuk debug
