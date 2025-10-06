@@ -107,4 +107,7 @@
                 alert("Harap masukkan nama lokasi terlebih dahulu.");
                 return;
             }
- 
+            
+          
+            const apiKey = "03d7b4d222cb4c8581940421250610"; 
+            const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(lokasi)}&aqi=no`;
